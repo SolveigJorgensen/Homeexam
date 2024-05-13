@@ -18,6 +18,8 @@ parser.add_argument('-c', '--client', action= 'store_true',  help='if True it en
 parser.add_argument('-p', '--port', type=InputValidation.valid_port, default=8088, help='Please provide the port adress the server will listen to, must be int and in the range [1024,65535]')
 parser.add_argument('-i', '--ip', default='127.0.0.1', type=InputValidation.valid_ip, help='if True it enable the server mode')
 parser.add_argument('-f', '--filename', type=str, help='enter webpage')
+parser.add_argument('-w', '--windowsize', type=InputValidation.valid_window, default = 3 , help='Please provide sliding window size')
+parser.add_argument('-d', '--discard', type=str, default= 0, help='Provide packet to be discarded')
 
 #Runs the parser and get the data.
 args = parser.parse_args()
@@ -36,12 +38,12 @@ if args.server and args.client:
     print('You cannot use both at the same time')
     exit(1)
 
-def main(server_port, server_ip, filename):
+def main(server_ip, server_port, filename, windowsize, discard_packet):
 
     if(args.client):
-        client.client(server_port, server_ip, filename)
+        client.client(server_ip, server_port, filename, windowsize)
     if(args.server):
-        server.server(server_port, server_ip)
+        server.server(server_ip, server_port, discard_packet)
 
 if __name__ == '__main__':
-        main(int(args.port), args.ip, args.filename)  # Calls the function main, with arguents for ip, portnumer and filname.
+        main(args.ip, int(args.port), args.filename, args.windowsize, int(args.discard))  # Calls the function main, with arguents for ip, portnumer and filname.

@@ -1,6 +1,7 @@
 #The following code is taken from my personal obligs and is used to
 #input for portnumber and ip adress and handels exceptions
 import argparse
+import time
 
 def valid_ip(string):
 
@@ -28,3 +29,17 @@ def valid_port(port):
         raise argparse.ArgumentTypeError('The portnumber must be a integer and in the range 1024 - 65535')
 
     return port
+
+def valid_window(windowsize):
+    try:
+        windowsize = int(windowsize)
+        if not 1 <= windowsize <= 10:
+            raise ValueError
+
+    except ValueError:
+        raise argparse.ArgumentTypeError('The windowsize must be a integer and in the range 1 - 10')
+
+    return windowsize
+
+def now():
+    return time.ctime(time.time())

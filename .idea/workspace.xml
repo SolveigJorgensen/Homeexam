@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18430ec4-99e0-4131-87cc-8910c5df1f5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/InputValidation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="18430ec4-99e0-4131-87cc-8910c5df1f5a" name="Changes" comment="Implemented a working UDP connection between a client and a server.">
+      <change afterPath="$PROJECT_DIR$/header.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DRTP-Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/DRTP-Application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputValidation.py" beforeDir="false" afterPath="$PROJECT_DIR$/InputValidation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DRTP-Application.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2fu5Ovkv5MWgx8xWZAiEo65d9dK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -44,11 +50,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.DRTP-Client.executor": "Run",
+    "Python.client.executor": "Debug",
+    "Python.header.executor": "Run",
+    "Python.server.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/solve/PycharmProjects/Data2410.Oblig1"
+    "last_opened_file_path": "C:/Users/solve/PycharmProjects/DATA2410 Nettverk/Homeexam"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -96,7 +105,30 @@
       <option name="presentableId" value="Default" />
       <updated>1714638093870</updated>
     </task>
+    <task id="LOCAL−00001" summary="Implemented a working UDP connection between a client and a server.">
+      <option name="closed" value="true" />
+      <created>1714736018977</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1714736018977</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implemented a working UDP connection between a client and a server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented a working UDP connection between a client and a server." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -105,6 +137,16 @@
           <url>file://$PROJECT_DIR$/DRTP-Client.py</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/client.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/DRTP-Application.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
