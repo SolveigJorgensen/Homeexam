@@ -7,6 +7,8 @@ from socket import *
 import header
 import os
 from datetime import datetime
+import time
+import client
 
 
 def server(server_ip, server_port, discard_packet):
@@ -46,6 +48,9 @@ def server(server_ip, server_port, discard_packet):
     #Filname is recived and the path is removed to create a copy of the file and save it in the application.
     filename = serverSocket.recvfrom(2048)[0].decode()
     filename = os.path.basename(filename)
+
+    start_time_str = serverSocket.recvfrom(2048)[0].decode()
+    start_time = float(start_time_str)
     counter = 1
     discard = True
 
@@ -55,6 +60,7 @@ def server(server_ip, server_port, discard_packet):
             data_recived, clientAddress = serverSocket.recvfrom(2048)
 
             if not data_recived:
+                end_time = time.time()
                 break
 
             header_msg = data_recived[:6]
@@ -91,4 +97,11 @@ def server(server_ip, server_port, discard_packet):
     else:
         print('FIN is not recived.')
 
+
+    total_time = end_time - start_time
+    file_size = os.path.getsize(filename) # Retunerer i bytes
+    file_size = file_size / (1000 * 1000) # Converts to Mega bytes
+
+    througput = file_size / total_time # Mbps
+    print(f'The througput is {througput} Mbps')
 #Denne Socketen er ikke blitt lukket og er klar for å taimot flere forespørsler.

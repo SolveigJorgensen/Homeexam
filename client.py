@@ -6,7 +6,9 @@
 
 import socket
 import header
+import time
 from datetime import datetime
+
 
 
 def client(server_ip, server_port, filename, windowsize):
@@ -37,13 +39,18 @@ def client(server_ip, server_port, filename, windowsize):
 
     clientSocket.sendto(filename.encode(), serverAddress)
 
-#Sending packets
+    #Sending packets
     print('Data Transfer: \n')
     packets = {}
     seq_sent = []
     ack_recived = []
+
     sequence_number = 1
     clientSocket.settimeout(0.5)
+
+    start_time = time.time()
+    start_time_str = str(start_time)
+    clientSocket.sendto(start_time_str.encode(), serverAddress)
 
     with open(filename,'rb') as file:
 
@@ -94,6 +101,7 @@ def client(server_ip, server_port, filename, windowsize):
     if (syn, ack, fin) == (0, 1, 1):
         print('FIN-ACK packet is recived')
         print('Connection closes')
+
         clientSocket.close()
     else: print('FIN-ACK is not recived.')
 
