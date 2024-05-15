@@ -11,12 +11,9 @@ from struct import *
 import time
 
 # I integer (unsigned long) = 4bytes and H (unsigned short integer 2 bytes)
-# see the struct official page for more info
+
 
 header_format = '!HHH'
-
-# print the header size: total = 6
-print(f'size of the header = {calcsize(header_format)}')
 
 
 def create_packet(seq, ack, flags, data):
