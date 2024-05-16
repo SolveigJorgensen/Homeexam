@@ -1,6 +1,6 @@
 # ----------- Client side of the DRTP application ---------- #
 
-# The following code include the client side of the DRTP application and is based on
+# The following code include the client side of the DRTP-Application and is based on
 # code provided by Safiquel Islam on https://github.com/safiqul/2410
 
 import socket

@@ -1,13 +1,19 @@
-# The following code is taken from my personal obligs and is used to
-# input for portnumber and ip adress and handels exceptions
+# -------------- Input validation ------------ #
+
+#The following code contains input validation functions and is mostly taken from my previous assignments/obligs.
+
 import argparse
-import time
 
-
-def valid_ip(ip):
+# Description:
+#   Input validation for ip andress, checks if in in the format X.X.X.X,
+#   and that the values are between 0 and 255. If not it raises exception.
+# Parameters:
+#   ip: Ip adress set by user.
+# Returns:
+#   A string with IP adress
+def check_ip(ip):
     try:
-        list = ip.split(".",
-                        3)  # This code splits the string into a list. The seperator = . and the maksimal split is set to 3.
+        list = ip.split(".", 3)         # Splits the string into a list. The seperator = . and the maxsimal split is set to 3.
 
         for value in list:
             number = int(value)
@@ -19,9 +25,14 @@ def valid_ip(ip):
 
     return ip
 
-
-# This function checks if the port nr is valid. It takes in the portnumber and returns it if it is in the range [1024, 65535]
-def valid_port(port):
+# Description:
+#   Input validation for port number, checks if input is an integer between 1024 and 65535
+#   If not it raises exception.
+# Parameters:
+#   port: Port number set by user.
+# Returns:
+#   A integer with port number
+def check_port(port):
     try:
         portnr = int(port)
         if not 1024 <= portnr <= 65535:
@@ -32,8 +43,14 @@ def valid_port(port):
 
     return portnr
 
-
-def valid_window(windowsize):
+# Description:
+#   Input validation for windowsize, checks if input is an integer between 1 and 10
+#   If not it raises exception.
+# Parameters:
+#   windowsize: Windowsize set by user.
+# Returns:
+#   A integer with windowsize
+def check_window(windowsize):
     try:
         windowsize = int(windowsize)
         if not 1 <= windowsize <= 10:
@@ -44,8 +61,14 @@ def valid_window(windowsize):
 
     return windowsize
 
-
-def valid_discard_packet(discard_packet):
+# Description:
+#   Input validation for discard packet, checks if input is an integer and equals 1 og bigger.
+#   If not it raises exception.
+# Parameters:
+#   discard packet: Packet to be discarded set by user.
+# Returns:
+#   A integer with packet to be discarded.
+def check_discard_packet(discard_packet):
     try:
         discard_packet = int(discard_packet)
         if discard_packet < 1:
@@ -56,8 +79,14 @@ def valid_discard_packet(discard_packet):
 
     return discard_packet
 
-def valid_filename(filename):
-
+# Description:
+#   Input validation for filename, checks if the file is a jpg file.
+#   If not it raises exception.
+# Parameters:
+#   filename : Filename set by user, either file to send og filename the recived file should have on the server side.
+# Returns:
+#   String with filename
+def check_filename(filename):
     try:
         if not filename.endswith('.jpg'):
             raise ValueError

@@ -1,50 +1,62 @@
-'''This code is taken from safiqul and creates a header for the packets'''
+# ------------ Header  --------- #
 
-'''
-    #Utility functions: 1) to create a packet of 1472 bytes with header (12 bytes) (sequence number, acknowledgement number,
-    #flags and receiver window) and applicaton data (1460 bytes), and 2) to parse
-    # the extracted header from the application data. 
-
-'''
+# The following code include the functions regarding header and packets in the DRTP-Application and is copyed from code provided
+# by Safiquel Islam on https://github.com/safiqul/2410/blob/main/header/header.py, some code is modified.
 
 from struct import *
-import time
 
-# I integer (unsigned long) = 4bytes and H (unsigned short integer 2 bytes)
-
-
+# This is the format of the header. Containing 6 bytes, split into 3 parst of 2 bytes. H stands for unsigned short integer.
+# Values for the header is assigned when create_packet() function is used.
 header_format = '!HHH'
 
-
+# Description:
+#   Creates a packet with sequence number, acknowledgment number,
+#   flags and data. The header include the seq number, ack number and flags.
+#   The application data is then added to the header.
+# Parameters:
+#   seq: Sequence number of the packet
+#   ack: Acknoledgment number,  it is used to send an acknowledgment back to the client with the same number as the received sequence number.
+#   flags: contain bits for S = SYN flag, A= ACK flag, F=FIN flag, R= Reset Flag used in a threeway handshake.
+#   data: Contains data that gets attached to the header.
+# Returns:
+#   A packet with a header and data.
 def create_packet(seq, ack, flags, data):
-    # Creates a packet with sequence number, acknowledgment number,
-    # flags and data.
     header = pack(header_format, seq, ack, flags)
-
-    # once we create a header, we add the application data to create a packet
-    # of 994 bytes
     packet = header + data
     return packet
 
-
+# Description:
+#   Takes a header of 6 bytes as argument,unpacks the value based on the specified header_format
+#   and return a tuple with the values
+# Parameters:
+#   header: First 6 bytes in a packet
+# Returns:
+#   A tuple of the header values (seq, ack, flags)
 def parse_header(header):
-    # taks a header of 6 bytes as an argument,
-    # unpacks the value based on the specified header_format
-    # and return a tuple with the values
     header_from_msg = unpack(header_format, header)
-    # parse_flags(flags)
     return header_from_msg
 
 
+# Description:
+#   Parse the first 3 fields in a flag. We dont use Reset flag.
+# Parameters:
+#   flags: contain bits for S = SYN flag, A= ACK flag, F=FIN flag, R= Reset Flag used in a threeway handshake.
+# Returns:
+#   A tuple with boolean values of the flags values (syn, ack, fin) where true means that the flag is set.
 def parse_flags(flags):
-    # we only parse the first 3 fields because we're not
-    # using rst in our implementation
     syn = bool(flags & (1 << 3))
     ack = bool(flags & (1 << 2))
     fin = bool(flags & (1 << 1))
     return syn, ack, fin
 
-#This function takes a packet in, and returns the flags.
+# Description:
+#   Parse a packet, takes a packet as argument, reads and parses the header, and then parse the flags.
+# Parameters:
+#   seq: Sequence number of the packet
+#   ack: Acknoledgment number, it is used to send an acknowledgment back to the client with the same number as the received sequence number.
+#   flags: contain bits for S = SYN flag, A= ACK flag, F=FIN flag, R= Reset Flag used in a threeway handshake.
+# Returns:
+#   A tuple with boolean values of the flags values (syn, ack, fin) where true means that the flag is set.
 def parse_packet(packet_recived):
     header_recived = packet_recived[:6]
     seq, ack, flags = parse_header((header_recived))
