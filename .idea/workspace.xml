@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18430ec4-99e0-4131-87cc-8910c5df1f5a" name="Changes" comment="Updated multiple parts of the code, input validation, throughput caculation, and added simple-topo file">
+    <list default="true" id="18430ec4-99e0-4131-87cc-8910c5df1f5a" name="Changes" comment="Added descriptions of functions and comments in the code">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Homeexam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DATA2410 Reliable Transport Protocol (DRTP) assignment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DRTP-Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/DRTP-Application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InputValidation.py" beforeDir="false" afterPath="$PROJECT_DIR$/InputValidation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/header.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DRTP-Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InputValidation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputValidation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/header.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simple-topo.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/simple-topo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +32,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "SolveigJorgensen"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SolveigJorgensen&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -61,50 +66,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.DRTP-Application.executor": "Debug",
-    "Python.DRTP-Client.executor": "Debug",
-    "Python.client.executor": "Debug",
-    "Python.header.executor": "Run",
-    "Python.server.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/solve/PycharmProjects/DATA2410 Nettverk/Oblig2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.DRTP-Application.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.DRTP-Client.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.client.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.header.executor&quot;: &quot;Run&quot;,
+    &quot;Python.server.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/solve/PycharmProjects/DATA2410 Nettverk/Oblig2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\solve\PycharmProjects\DATA2410 Nettverk\Homeexam\src" />
       <recent name="C:\Users\solve\PycharmProjects\DATA2410 Nettverk\Homeexam" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.DRTP-Application">
-    <configuration name="DRTP-Application" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Homeexam" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DRTP-Application.py" />
-      <option name="PARAMETERS" value="-s -i 127.0.0.1 -p 8080 -f image" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.application">
     <configuration name="DRTP-Client" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Homeexam" />
+      <module name="DATA2410 Reliable Transport Protocol (DRTP) assignment" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -125,13 +109,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="application" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DATA2410 Reliable Transport Protocol (DRTP) assignment" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\solve\PycharmProjects\DATA2410 Nettverk\Homeexam\src\application.py" />
+      <option name="PARAMETERS" value="-s -i 127.0.0.1 -p 8080 -f image" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.DRTP-Client" />
-      <item itemvalue="Python.DRTP-Application" />
+      <item itemvalue="Python.application" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DRTP-Application" />
+        <item itemvalue="Python.application" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +185,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1715789373770</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Added descriptions of functions and comments in the code">
+      <option name="closed" value="true" />
+      <created>1715848208831</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1715848208831</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,7 +211,8 @@
     <MESSAGE value="Implemented a treeway handshake, packet transfere and new command arguments" />
     <MESSAGE value="Implemented calculation of throughput" />
     <MESSAGE value="Updated multiple parts of the code, input validation, throughput caculation, and added simple-topo file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated multiple parts of the code, input validation, throughput caculation, and added simple-topo file" />
+    <MESSAGE value="Added descriptions of functions and comments in the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added descriptions of functions and comments in the code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -209,12 +223,12 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/server.py</url>
+          <url>file://$PROJECT_DIR$/src/server.py</url>
           <line>68</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/InputValidation.py</url>
+          <url>file://$PROJECT_DIR$/src/InputValidation.py</url>
           <line>89</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>

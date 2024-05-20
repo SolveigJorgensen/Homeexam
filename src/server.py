@@ -98,10 +98,10 @@ def server(server_ip, server_port, discard_packet, filename):
             else: print(datetime.now().time(), f' -- out-of-order packet {seq} is recived') # If packet is out of order
 
 
-    # Calculating througput:
+    # Calculating throughput:
 
-    total_time = end_time - start_time                      # Total time for data transfere in seconds
-    file_size = len(total_data_recived) / (1000 * 1000)     # Converts filesize of data recived including header to Mega bytes
+    total_time = end_time - start_time                   # Total time for data transfer in seconds
+    file_size = len(total_data_recived) / (1000 * 1000)  # Converts filesize of data recived including header to Mega bytes
 
-    througput = (file_size / total_time) * 8                # Througput calculated in Mega bits per second
-    print(f'The througput is {througput} Mbps')
+    throughput = (file_size / total_time) * 8             # Throughput calculated in Mega bits per second
+    print(f'The througput is {throughput} Mbps')

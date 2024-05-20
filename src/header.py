@@ -1,6 +1,6 @@
 # ------------ Header  --------- #
 
-# The following code include the functions regarding header and packets in the DRTP-Application and is copyed from code provided
+# The following code include the functions regarding header and packets in the DRTP-Application and is copied from code provided
 # by Safiquel Islam on https://github.com/safiqul/2410/blob/main/header/header.py, some code is modified.
 
 from struct import *

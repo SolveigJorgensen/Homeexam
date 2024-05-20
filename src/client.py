@@ -33,7 +33,7 @@ def client(server_ip, server_port, filename, windowsize):
         print('SYN packet is sent')                                             # Sends SYN packet to server
 
         packet_recived, serverAddress = clientSocket.recvfrom(2048)             # Recived a packet, server address is stored in Server adress
-                                                                                # and packet is storer in packet_recived
+                                                                                  # and packet is storer in packet_recived
         syn, ack, fin = header.parse_packet(packet_recived)                     # Function parse_packet is called. Returns bit set inn flags of the header.
 
         if (syn, ack, fin) == (1, 1, 0):                                        # If syn and ack bit is set in flags,

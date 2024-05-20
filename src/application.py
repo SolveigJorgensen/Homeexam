@@ -3,8 +3,6 @@
 # Some of this code is copyd from or based on my previouse assignemts/Obligs.
 
 import argparse
-import sys
-import ast
 import InputValidation
 import client
 import server
@@ -17,8 +15,8 @@ parser.add_argument('-s', '--server', action= 'store_true',  help='Enable the se
 parser.add_argument('-c', '--client', action= 'store_true',  help='Enable the client mode')
 parser.add_argument('-p', '--port', type=InputValidation.check_port, default=8088, help='Sets the port adress the server will listen to, must be integer and in the range [1024,65535]')
 parser.add_argument('-i', '--ip', default='10.0.1.2', type=InputValidation.check_ip, help='Sets the the ip adress the server in run from/the client want to connect to')
-parser.add_argument('-f', '--filename', type=InputValidation.check_filename, default='image.jpg', help='The filepath to the file you want to tranfere')
-parser.add_argument('-w', '--windowsize', type=InputValidation.check_window, default = 3 , help='Sets the sliding window size')
+parser.add_argument('-f', '--filename', type=InputValidation.check_filename, default='recived_image.jpg', help='The filepath to the file you want to tranfere')
+parser.add_argument('-w', '--windowsize', type=InputValidation.check_window, default = 3, help='Sets the sliding window size')
 parser.add_argument('-d', '--discard', type=InputValidation.check_discard_packet, default=-1, help='Sets the sequence number for the packet to be discarded on the server side')
 
 # Parses the arguments set by user and calls input validation functions.

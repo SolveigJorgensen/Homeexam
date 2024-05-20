@@ -1,4 +1,5 @@
-#This code is taken from safiqul
+# This code is copied from Safiqul Islam https://github.com/safiqul/drtp-oppgave/blob/main/simple-topo.py and is used
+# to test the code in mininet.
 
 from mininet.topo import Topo
 from mininet.net import Mininet
