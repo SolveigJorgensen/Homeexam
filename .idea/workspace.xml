@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18430ec4-99e0-4131-87cc-8910c5df1f5a" name="Changes" comment="Added descriptions of functions and comments in the code">
-      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Homeexam.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DATA2410 Reliable Transport Protocol (DRTP) assignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DRTP-Application.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/application.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InputValidation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputValidation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/header.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simple-topo.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/simple-topo.py" afterDir="false" />
+    <list default="true" id="18430ec4-99e0-4131-87cc-8910c5df1f5a" name="Changes" comment="Added readmefile.">
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +182,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1715848208831</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Added readmefile.">
+      <option name="closed" value="true" />
+      <created>1716204711287</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1716204711287</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +209,8 @@
     <MESSAGE value="Implemented calculation of throughput" />
     <MESSAGE value="Updated multiple parts of the code, input validation, throughput caculation, and added simple-topo file" />
     <MESSAGE value="Added descriptions of functions and comments in the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added descriptions of functions and comments in the code" />
+    <MESSAGE value="Added readmefile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added readmefile." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
